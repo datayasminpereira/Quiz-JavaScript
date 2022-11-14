@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #1d232a;
+}
+
+header, main {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*  CABECALHO */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #15191C;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.16);
+}
+
+#main-title {
+    font-size: 25px;
+    line-height: 1.5;
+    padding: 15px;
+    color: #fff;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SECTION ID="START-CONTAINER" */
+#start-container {
+    margin: 1.5em;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #CDD1C4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 1.5em;
+    color: #fff
+}
+
+.welcome {
+    width: 95%;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.welcome svg {
+    margin-left: 4px;
+}
+
+.welcome h2 {
+    font-weight: bold;
+}
+
+#start-container p {
+    font-size: 14px;
+}
+
+.start-quiz, .restart-quiz {
+    color: #000;
+    background-color: hsl(47, 68%, 53%);
+    padding:  10px 20px;
+    border: 1px transparent;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 0px 4px rgb(0, 0, 0, 0.36), 0px 4px 4px rgb(0, 0, 0, 0.36);
+}
+
+/* SECTION ID="PLAYING-CONTAINER"*/
+
+#playing-container {
+    margin: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #CDD1C4;
+    border-radius: 10px;
+}
+
+#progress-box {
+    position: relative;
+    width: 80%;
+    margin: 5px 40px;
+    background-color: #15191C;
+    border: 2px solid #1d232a;
+    border-radius: 20px;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#progress-fill {
+    width: 1%;
+    background-color: hsl(47, 68%, 53%);
+    border: 2px solid #1d232a;
+    border-radius: 20px;
+    height: 6px;
+}
+
+#question {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1em 0;
+    
+}
+
+#answers-box {
+    margin: 0 0 1em;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    /* width: 50%; */
+
+}
+
+#answers-box button {
+     /* testando */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #EEF1EF; /*#EEF1EF*/
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 1em 0;
+    padding: 1em;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgb(255, 255, 255, 0.16);
+    /* border: 4px solid blue */
+}
+
+#answers-box button:hover {
+    background-color: hsl(47, 68%, 53%);
+    color: #EEF1EF;
+}
+
+
+.btn-letter {
+    text-transform: uppercase;
+    background-color: hsl(47, 68%, 53%);
+    padding: 5px 10px;
+    border: 2px solid #EEF1EF;
+    border-radius: 50%;
+}
+
+.question-answers {
+    margin-left: 1em;
+}
+
+/* AINDA PRECISA SER APERFEICOANDO*/
+
+#answers-box .correct,  #answers-box .correct:hover{
+    /* implementar por js => adicionar classe correct se tiver o correct=true*/
+    border: 2px solid green;
+    background-color: #EEF1EF;
+    color: #000;
+}
+
+#answers-box .correct .btn-letter,  #answers-box .correct .btn-letter:hover{
+    background-color: green;
+}
+
+#answers-box .wrong,  #answers-box .wrong:hover{
+    /* implementar por js => adicionar classe wrong se tiver o correct=false*/
+    border: 2px solid red;
+    background-color: #EEF1EF;
+    color:#000;
+}
+
+#answers-box .wrong .btn-letter, #answers-box .wrong .btn-letter:hover {
+    background-color: red;
+}
+
+/* SECTION ID="SCORE-CONTAINER"*/
+
+#score-container {
+    margin: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 1.5em;
+    padding: 10px;
+    border: 2px solid #CDD1C4;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.message-score, #percentage-score {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.message-score, .restart-quiz {
+    margin: 10px 0;
+}
+
+
+#imgs-score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 480px) {
+    #answers-box {
+        width: auto;
+    }
+
+    #start-container {
+        font-size: 14px;
+    }
+}
